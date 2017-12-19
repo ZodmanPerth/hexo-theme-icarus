@@ -36,6 +36,53 @@ code
     font-family: font-mono
     background-color: #f8f8f8
 
+admon-color($color) {
+  color: darken($color, 35%);
+  background-color: lighten($color, 80%);
+  border-color: $color;
+}
+
+.admonition {
+  padding: 1em 1.2em;
+  margin: 0 0 1.8em 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: left;
+  &-title {
+    float: left;
+    margin: 0 .6em 0 0 !important;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 1.7em !important;
+    background-color: #aab8c6;
+    color: #eef1f4;
+  }
+  & p:not(admonition-title) {
+      margin: 0;
+  }
+  &.note {
+    admon-color(color-admonition-note);
+  }
+  &.info,
+  &.tips {
+    admon-color(color-admonition-info);
+  }
+  &.warning {
+    admon-color(color-admonition-warning);
+  }
+  &.error,
+  &.critical {
+    admon-color(color-admonition-error);
+  }
+  &.question {
+    admon-color(color-admonition-question);
+  }
+}
+
 .outer
     clearfix()
     max-width: (column-width + gutter-width) * columns + gutter-width
