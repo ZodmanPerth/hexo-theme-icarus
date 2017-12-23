@@ -29,7 +29,7 @@ profile:
     posts: 'posts'
     tags: 'tags'
 insight:
-    hint: 'Type something...'
+    hint: 'What are you looking for?'
     posts: 'Posts'
     pages: 'Pages'
     categories: 'Categories'
