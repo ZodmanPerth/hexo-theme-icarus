@@ -80,8 +80,14 @@ admon-title-light($color) {
     line-height: 1.8em !important;
   }
   & p:not(admonition-title) {
-      margin: 0;
-      line-height: 1.8em;
+    margin: 0;
+    line-height: 1.8em;
+  }
+  &.quote {
+    admon-color-light(color-admonition-info);
+    > .admonition-title {
+        display: none !important
+    }
   }
   &.note {
     admon-color(color-admonition-note);
@@ -97,7 +103,7 @@ admon-title-light($color) {
   }
   &.info,
   &.tips {
-      admon-color-light(color-admonition-info);
+    admon-color-light(color-admonition-info);
     > .admonition-title {
         admon-title-light(color-admonition-info);
     }

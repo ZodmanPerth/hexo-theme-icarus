@@ -98,17 +98,25 @@
         border-bottom: 1px solid color-border
         padding: 10px 0
     blockquote
-        position: static
-        font-family: font-serif
-        font-size: 1.1em
-        margin: 0 -20px
-        padding: 10px 20px 10px 54px
-        background: #fcfcfc
-        border-left: 4px solid #eee
+        background: #fafafd
+        padding: 1em 1.4em
+        text-align: center
         &:before
             top: 20px
             left: 10px
             content: "\f10d"
+            color: #e2e2e2
+            font-size: 32px;
+            font-family: FontAwesome
+            text-align: center
+            position: static
+        & > p
+            display: inline-block
+            padding: 0 1em
+        &:after
+            top: 20px
+            left: 10px
+            content: "\f10e"
             color: #e2e2e2
             font-size: 32px;
             font-family: FontAwesome
