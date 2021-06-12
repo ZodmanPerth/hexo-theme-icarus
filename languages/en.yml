@@ -59,7 +59,7 @@ plugin:
       policy: Cookie Policy
 search:
     search: 'Search'
-    hint: 'Type something...'
+    hint: 'What are you looking for?'
     no_result: 'No results for'
     untitled: '(Untitled)'
     empty_preview: '(No preview)'

@@ -59,7 +59,7 @@ plugin:
       policy: Politique relative aux cookies
 search:
     search: 'Search'
-    hint: 'Type something...'
+    hint: 'What are you looking for?'
     no_result: 'Aucun résultat pour'
     untitled: '(Sans titre)'
     empty_preview: '(Pas de prévisualisation)'
