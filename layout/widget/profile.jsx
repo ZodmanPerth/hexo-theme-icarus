@@ -9,7 +9,7 @@ class Profile extends Component {
         }
         return <div class="level is-mobile is-multiline">
             {links.filter(link => typeof link === 'object').map(link => {
-                return <a class="level-item button is-transparent is-marginless"
+                return <a class="level-item button link-button is-transparent is-marginless"
                     target="_blank" rel="noopener" title={link.name} href={link.url}>
                     {'icon' in link ? <i class={link.icon}></i> : link.name}
                 </a>;
