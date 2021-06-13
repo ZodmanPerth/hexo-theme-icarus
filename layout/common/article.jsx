@@ -52,6 +52,23 @@ module.exports = class extends Component {
                             }}></span>}
                             {/* author */}
                             {page.author ? <span class="level-item"> {page.author} </span> : null}
+                            {/* Read time */}
+                            {article && article.readtime && article.readtime === true ? <span class="level-item">
+                                {(() => {
+                                    const words = getWordCount(page._content);
+                                    const time = moment.duration((words / 150.0) * 60, 'seconds');
+                                    return `${_p('article.read_time', time.locale(index ? indexLaunguage : language).humanize())} (${_p('article.word_count', words)})`;
+                                })()}
+                            </span> : null}
+                            {/* Visitor counter */}
+                            {!index && plugins && plugins.busuanzi === true ? <span class="level-item" id="busuanzi_container_page_pv" dangerouslySetInnerHTML={{
+                                __html: _p('plugin.visit_count', '<span id="busuanzi_value_page_pv">0</span>')
+                            }}></span> : null}
+                        </div>
+                    </div> : null}
+                    {/* Metadata line 2*/}
+                    {page.layout !== 'page' ? <div class="article-meta is-size-7 is-uppercase level is-mobile">
+                        <div class="level-left">
                             {/* Categories */}
                             {page.categories && page.categories.length ? <span class="level-item">
                                 {(() => {
@@ -65,18 +82,6 @@ module.exports = class extends Component {
                                     return categories;
                                 })()}
                             </span> : null}
-                            {/* Read time */}
-                            {article && article.readtime && article.readtime === true ? <span class="level-item">
-                                {(() => {
-                                    const words = getWordCount(page._content);
-                                    const time = moment.duration((words / 150.0) * 60, 'seconds');
-                                    return `${_p('article.read_time', time.locale(index ? indexLaunguage : language).humanize())} (${_p('article.word_count', words)})`;
-                                })()}
-                            </span> : null}
-                            {/* Visitor counter */}
-                            {!index && plugins && plugins.busuanzi === true ? <span class="level-item" id="busuanzi_container_page_pv" dangerouslySetInnerHTML={{
-                                __html: _p('plugin.visit_count', '<span id="busuanzi_value_page_pv">0</span>')
-                            }}></span> : null}
                         </div>
                     </div> : null}
                     {/* Title */}
