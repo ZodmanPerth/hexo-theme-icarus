@@ -98,11 +98,50 @@ article
                         margin-left: .5em
 
             .message.message-immersive
-                border-radius: 0
                 margin: 0 0 - $card-content-padding $card-content-padding 0 - $card-content-padding
 
+            .message-body
+                border: none
+                border-radius: 0
+
+            .zodnote .message-body .tag
+                color: white
+
+            .is-primary.zodnote
                 .message-body
-                    border: none
+                    color: darken(zodnote-color-blue, 18.5)
+                    background-color: lighten(zodnote-color-blue, 21%)
+                    .tag
+                        background-color: zodnote-color-blue
+
+            .is-info.zodnote
+                .message-body
+                    color: darken(zodnote-color-aqua, 20)
+                    background-color: lighten(zodnote-color-aqua, 30.5%)
+                    .tag
+                        background-color: zodnote-color-aqua
+
+            .is-success.zodnote
+                .message-body
+                    color: darken(zodnote-color-green, 17)
+                    background-color: lighten(zodnote-color-green, 31.8%)
+                    .tag
+                        background-color: zodnote-color-green
+
+            .is-warning.zodnote
+                .message-body
+                    color: darken(zodnote-color-yellow, 28)
+                    background-color: lighten(zodnote-color-yellow, 27.5%)
+                    .tag
+                        color: darken(zodnote-color-yellow, 37)
+                        background-color: zodnote-color-yellow
+
+            .is-danger.zodnote
+                .message-body
+                    color: darken(zodnote-color-red, 10)
+                    background-color: lighten(zodnote-color-red, 34%)
+                    .tag
+                        background-color: zodnote-color-red
 
             .highlight-body
                 max-height: 26.8em;

@@ -25,7 +25,7 @@ hexo.extend.tag.register('zodnote', function(args, content) {
   }).slice(3, -5);  // slice removes leading <p> and trailing </p>
 
   var output =
-    `<article class="message message-immersive ${colourClass}">
+    `<article class="message message-immersive ${colourClass} zodnote">
       <div class="message-body">
         <span class="tag ${colourClass} mr-2">${titleText}</span>
         ${quoteText}
