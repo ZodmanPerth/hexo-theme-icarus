@@ -18,7 +18,7 @@ hexo.extend.tag.register('zodcredit', function(args, content) {
 
   var output =
   `
-  <a style="background-color:${backgroundColourClass};color:white;text-decoration:none;padding:4px 6px;font-size:12px;line-height:1.2;display:inline-block;border-radius:3px" href="${urlText}">
+  <a style="background-color:${backgroundColourClass};color:white;text-decoration:none;margin-top: 10px;padding:4px 6px;font-size:12px;line-height:1.2;display:inline-block;border-radius:3px" href="${urlText}">
     <i class="${typeClass} mr-2"></i>${bodyText}
   </a>
   `
