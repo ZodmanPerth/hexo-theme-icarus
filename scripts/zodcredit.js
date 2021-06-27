@@ -1,3 +1,13 @@
+// Adds a credit with a link
+// Usage:
+// {% zodcredit colour [type] url %}
+//    content of credit
+// {% endzodcredit %}
+// Where:
+//    colour  = black
+//    type    = photo
+//    url     = link to the credited work
+//    content = markdown content of the credit
 hexo.extend.tag.register('zodcredit', function(args, content) {
 
   var backgroundColourClass = args[0] || 'black';

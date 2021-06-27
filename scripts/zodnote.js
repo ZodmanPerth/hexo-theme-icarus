@@ -1,4 +1,13 @@
 // Kudos: https://github.com/haishanh/hexo-tag-admonition/blob/master/index.js
+// Adds a tagged note in a variety of colours.
+// Usage:
+// {% zodnote colour [header text] %}
+//    content of note
+// {% endzodnote %}
+// Where:
+//    colour      = [blue,aqua,green,yellow,red]
+//    header text = the text in the tag.  Can include spaces.
+//    content     = markdown content of the note
 hexo.extend.tag.register('zodnote', function(args, content) {
 
   var colourClass = "is-primary";
