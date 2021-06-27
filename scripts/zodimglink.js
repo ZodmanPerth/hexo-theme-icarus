@@ -1,7 +1,6 @@
 // Adds a titled image, wrapped in a hyperlink.
-// Note: You will need to style `.zodimglink img` to position the link.
 // Usage:
-// {% zodimglink imageUrl linkUrl %}
+// {% zodimglink imageUrl linkUrl height %}
 //    title text
 // {% endzodimglink %}
 // Where:
@@ -12,6 +11,7 @@ hexo.extend.tag.register('zodimglink', function(args, content) {
 
   var imgUrl = args[0];
   var linkUrl = args[1];
+  var height = args[2];
 
   var titleText = hexo.render.renderSync({
     text: content,
@@ -24,8 +24,8 @@ hexo.extend.tag.register('zodimglink', function(args, content) {
   // </a>   
   var output =    
     `<a href="${linkUrl}" class="zodimglink" target="_blank" rel="external">
-    <img src="${imgUrl}" height="2em" alt="${titleText}" title="${titleText}">
-    <p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 0px">${titleText}</p>
+    <img src="${imgUrl}" style="display:block;margin:0 auto 0 auto;height:${height}" alt="${titleText}" title="${titleText}">
+    <p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 0px; padding-bottom: 1em">${titleText}</p>
     </a>`
 
   return output;

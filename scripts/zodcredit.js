@@ -1,14 +1,14 @@
 // Adds a credit with a link
 // Usage:
-// {% zodcredit colour [type] url %}
+// {% zodcredit colour type [url] %}
 //    content of credit
 // {% endzodcredit %}
 // Where:
 //    colour  = black
 //    type    = photo
-//    url     = link to the credited work
+//    url     = optional link to the credited work
 //    content = markdown content of the credit
-hexo.extend.tag.register('zodcredit', function(args, content) {
+hexo.extend.tag.register('zodcredit', function (args, content) {
 
   var backgroundColourClass = args[0] || 'black';
 
@@ -19,7 +19,11 @@ hexo.extend.tag.register('zodcredit', function(args, content) {
   //   //   break;
   // }
 
-  var urlText = args[2] || 'https://redperegrine.net';
+  var urlText = args[2];
+  if (args[2]) `href="${args[2]}"`
+
+  var container = "a";
+  if (!args[2]) container = "div"
 
   var bodyText = hexo.render.renderSync({
     text: content,
@@ -27,10 +31,10 @@ hexo.extend.tag.register('zodcredit', function(args, content) {
   }).slice(3, -5);  // slice removes leading <p> and trailing </p>
 
   var output =
-  `
-  <a style="background-color:${backgroundColourClass};color:white;text-decoration:none;margin-top: 10px;padding:4px 6px;font-size:12px;line-height:1.2;display:inline-block;border-radius:3px" href="${urlText}">
+    `
+  <${container} style="background-color:${backgroundColourClass};color:white;text-decoration:none;margin-top: 10px;padding:4px 6px;font-size:12px;line-height:1.2;display:inline-block;border-radius:3px" ${urlText}>
     <i class="${typeClass} mr-2"></i>${bodyText}
-  </a>
+  </${container}>
   `
 
   return output;
