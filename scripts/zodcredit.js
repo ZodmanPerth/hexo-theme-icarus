@@ -20,7 +20,7 @@ hexo.extend.tag.register('zodcredit', function (args, content) {
   // }
 
   var urlText = args[2];
-  if (args[2]) `href="${args[2]}"`
+  if (args[2]) urlText =`href="${args[2]}"`
 
   var container = "a";
   if (!args[2]) container = "div"
