@@ -13,7 +13,8 @@ hexo.extend.tag.register('zodcaption', function(args, content) {
     engine: 'markdown'
   }).slice(3, -5);  // slice removes leading <p> and trailing </p>
 
-  var output =`<p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 6px">${content}</p>`
+  var output =
+    `<p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 6px">${quoteText}</p>`
   return output;
 
 }, {
