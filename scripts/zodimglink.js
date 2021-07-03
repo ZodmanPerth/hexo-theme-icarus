@@ -6,7 +6,7 @@
 // Where:
 //    linkUrl     = the hexo url of the image
 //    imageUrl    = the link url
-//    title text  = the text in the title.  Can include spaces.
+//    height      = the height of the image
 hexo.extend.tag.register('zodimglink', function(args, content) {
 
   var imgUrl = args[0];
