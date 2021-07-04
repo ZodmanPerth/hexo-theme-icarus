@@ -18,11 +18,7 @@ hexo.extend.tag.register('zodimglink', function(args, content) {
     engine: 'markdown'
   }).slice(3, -5);  // slice removes leading <p> and trailing </p>
 
-  // <a href="https://gist.github.com/ZodmanPerth/fa5dd4b800f1237f3de8dfe58a4a5951" class="zodimglink" target="_blank" rel="external">
-  //   <img src="github-gist.png" height="2em" alt="See all the code on my Github Gist" title="See all the code on my Github Gist">
-	// 	<p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 0px">See all the code on my Github Gist</p>   
-  // </a>   
-  var output =    
+   var output =    
     `<a href="${linkUrl}" class="zodimglink" target="_blank" rel="external">
     <img src="${imgUrl}" style="display:block;margin:0 auto 0 auto;height:${height}" alt="${titleText}" title="${titleText}">
     <p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 0px; padding-bottom: 1em">${titleText}</p>
