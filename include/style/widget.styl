@@ -33,6 +33,12 @@
 /* ---------------------------------
  *      Table of Content Widget
  * --------------------------------- */
+
+.widget.card#toc
+    overflow-y: auto
+    min-height: 9em;
+    max-height: calc(100vh - 43em);
+
 +mobile()
     .widget.card#toc
         display: none
