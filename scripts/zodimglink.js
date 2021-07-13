@@ -20,7 +20,7 @@ hexo.extend.tag.register('zodimglink', function(args, content) {
 
    var output =    
     `<a href="${linkUrl}" class="zodimglink" target="_blank" rel="external">
-    <img src="${imgUrl}" style="display:block;margin:0 auto 0 auto;height:${height}" alt="${titleText}" title="${titleText}">
+    <img src="${imgUrl}" style="display:block;margin:0 auto 0 auto;height:${height};object-fit:contain" alt="${titleText}" title="${titleText}">
     <p class="has-text-centered is-size-6 caption" style="color: #7a7a7a;padding-top: 0px; padding-bottom: 1em">${titleText}</p>
     </a>`
 
