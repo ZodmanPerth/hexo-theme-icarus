@@ -58,7 +58,7 @@ hexo.extend.tag.register('zodcolumns', function(args, content) {
       }
       else {
         if (isFirstColumnDirective) {
-          output += `<div class="columns">\n`;
+          output += `<div class="columns" style="overflow:auto">\n`;
         }
         else {
           output += "\t</div>\n";
